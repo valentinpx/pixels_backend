@@ -24,6 +24,20 @@ class Pixel(db.Model):
         self.color = color
         self.key = randint(0, 100000)
 
+# Defining functions to manipulate data
+def only_contains(str, allowed):
+    dest = False
+
+    for used in str:
+        dest = False
+        for valid in allowed:
+            if (used == valid):
+                dest = True
+                break
+        if (dest == False):
+            return (False)
+    return (True)
+
 # Defining what URL should trigger a function
 @app.route("/api")
 def hello_world():
@@ -55,6 +69,8 @@ def edit(id):
 
     #if (pixel.key == key):
         #return ("Unauthorized : bad key", 401)
+    if (len(color) != 6 or only_contains(color, "0123456789abcdefABCDEF") == False):
+        return ("Color not valid", 401)
     if (pixel != None):
         pixel.color = color
         pixel.key = randint(0, 100000)
