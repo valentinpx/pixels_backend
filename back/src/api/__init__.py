@@ -25,11 +25,11 @@ class Pixel(db.Model):
         self.key = randint(0, 100000)
 
 # Defining what URL should trigger a function
-@app.route("/")
+@app.route("/api")
 def hello_world():
     return ("<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Click for a surprise</a>")
 
-@app.route("/pixels")
+@app.route("/api/pixels")
 def list_all():
     pixels = Pixel.query.all()
     dest = []
@@ -38,7 +38,7 @@ def list_all():
         dest.insert(0, {"id": pixel.id, "color": pixel.color})
     return (jsonify(dest))
 
-@app.route("/pixels/<id>")
+@app.route("/api/pixels/<id>")
 def get_specified(id):
     pixel = Pixel.query.get(id)
 
@@ -47,7 +47,7 @@ def get_specified(id):
     else:
         return ("Not found", 404)
 
-@app.route("/pixels/<id>/edit", methods = ['POST'])
+@app.route("/api/pixels/<id>/edit", methods = ['POST'])
 def edit(id):
     pixel = Pixel.query.get(id)
     color = request.args.get('color')
