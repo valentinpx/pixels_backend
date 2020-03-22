@@ -51,9 +51,13 @@ def get_specified(id):
 def edit(id):
     pixel = Pixel.query.get(id)
     color = request.args.get('color')
+    #key = request.args.get('key')
 
+    #if (pixel.key == key):
+        #return ("Unauthorized : bad key", 401)
     if (pixel != None):
         pixel.color = color
+        pixel.key = randint(0, 100000)
         db.session.commit()
         return ({"id": pixel.id, "color": pixel.color})
     return ("Not found", 404)
