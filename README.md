@@ -14,9 +14,10 @@ Epitech Jam about street art
         "color" : "FFFFFF",
         "id" : "1"
     },
+    ...,
     {
         "color" : "000000",
-        "id" : "10"
+        "id" : "103680"
     }
 ]
 ```
@@ -44,7 +45,6 @@ Epitech Jam about street art
 
 ***Response***
 - `200 OK` on success
-```json
 ```json
 {
     "color" : "000000",
