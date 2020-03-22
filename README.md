@@ -2,7 +2,7 @@
 Epitech Jam about street art
 
 ## API
-###  List all pixels colors by id
+###  List all pixels color by id
 ***Definition***
 - `GET /api/pixels`
 
