@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+    pixels:
+        build:  .
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - 8888:80
