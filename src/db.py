@@ -13,3 +13,11 @@ class Database:
         for el in cur.execute("SELECT * FROM pixel ORDER BY id"):
             dest.append(Pixel(el))
         return dest
+    
+    def get_pixel(self, id):
+        cur = self.con.cursor()
+        res = cur.execute("SELECT * FROM pixel WHERE id=:id", {"id": id}).fetchone()
+
+        if (res == None):
+            return None
+        return Pixel(res)

@@ -25,3 +25,11 @@ def list_all():
     for pixel in pixels:
         dest.append(pixel)
     return(jsonify(dest))
+
+@app.route("/api/pixels/<id>")
+def get_specified(id):
+    pixel = Database("db/pixels.db").get_pixel(id)
+
+    if (pixel == None):
+        return ("Not found", 404)
+    return ({"id": pixel.id, "color": pixel.color})

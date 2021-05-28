@@ -30,7 +30,7 @@ Epitech Jam about street art
 ```json
 {
     "color" : "000000",
-    "id" : "10"
+    "id" : 10
 }
 ```
 - `404 Not Found` if "Q" does not exist
@@ -47,7 +47,7 @@ Epitech Jam about street art
 ```json
 {
     "color" : "000000",
-    "id" : "10"
+    "id" : 10
 }
 ```
 - `404 Not Found` if pixel does not exist

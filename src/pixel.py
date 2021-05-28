@@ -3,8 +3,8 @@ import json
 # Pixel class
 class Pixel:
     def __init__(self, db_pixel):
-        db_id, color, key = db_pixel
-        self.id = db_id
+        id, color, key = db_pixel
+        self.id = id
         self.color = color
         self.key = key
     
