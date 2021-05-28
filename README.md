@@ -44,11 +44,5 @@ Epitech Jam about street art
 
 ***Response***
 - `200 OK` on success
-```json
-{
-    "color" : "000000",
-    "id" : 10
-}
-```
 - `404 Not Found` if pixel does not exist
-- `401 Color not valid` if color is not hexadecimal with 6 characters
+- `401 Invalid Color` if color is not hexadecimal with 6 characters
