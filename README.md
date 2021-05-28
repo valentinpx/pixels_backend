@@ -1,5 +1,8 @@
 # pixels
-Epitech Jam about street art
+Epitech Jam about street art.
+Inspired by r/places.
+
+frontend disponible sur le profil de [Lucas Decrock](https://github.com/lucasdcrk/pixels-frontend)
 
 ## API
 ###  List all pixels color by id
